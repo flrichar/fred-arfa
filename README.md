@@ -18,13 +18,9 @@ e protocols like VPN/SSH/TLS
  - keep env vars separate, then symlink terraform.tfvars for maximum laziness
  - ability to run this arfa (AWS ReFerence Archictecture) in different regions with identical config
 
-A big thanks to Jeffery (you know who you are), I took a lot of your tf ideas and mashed them together with m
-ne. If there's a proper awesome way to send attribution let me know.
+A big thanks to Jeffery (you know who you are), I took a lot of your tf ideas and mashed them together with mine. If there's a proper awesome way to send attribution let me know.
 
-This is nowhere near perfect. I want to make the access rules for trust-nets a variable, and perhaps a module
-for the subnets.  Right now there's a weird catch 22 where terraform can't count subnets if they're not creat
-d yet.  One can always get around this by using terraform -target=aws_vpc.main ... in other words, create the
-VPC first then continue.
+This is nowhere near perfect. I want to make the access rules for trust-nets a variable, and perhaps a module for the subnets.  Right now there's a weird catch 22 where terraform can't count subnets if they're not created yet.  One can always get around this by using terraform -target=aws_vpc.main ... in other words, create the VPC first then continue.
 
 Because I use this in my labs, tons of subnets were not necessary.  As small as necessary, with only two.
 
