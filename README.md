@@ -8,8 +8,7 @@ freds arfa -- aws reference architecture
  - terraform 0.12+, tested with 0.12.x, 0.13.x, 0.14.x
  - AWS cloud resources that cost zero dollars when no instances and no volumes are present
  - remove unnecessary stuff like NAT gws, xLBs, VPN, storage
- - limit access to only trusted public (ipv4/ipv6) nets, and other private trust-nets originating behind secu
-e protocols like VPN/SSH/TLS
+ - limit access to only trusted public (ipv4/ipv6) nets, and other private trust-nets originating behind secure protocols like VPN/SSH/TLS
  - if a nat gw is desired, spin up a small linux distro like vyos (can also handle vpn traffic)
  - 1x internal and 1x external subnets, in two different AZs
  - dual stack ipv4 & ipv6, the v6-internal subnet uses eigw for egress-only
