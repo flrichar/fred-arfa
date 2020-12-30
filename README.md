@@ -26,4 +26,4 @@ Because I use this in my labs, tons of subnets were not necessary.  As small as 
 
 Other ideas? Add other no-cost resources (looking at you, peering connections).
 
-Another idea I had was to make the tf flexible, you may see some ignore statements commented out.  I actually wrote this backwards by having the cloud resources built first, then imported everything.  An idea occurred to me that some resources without a lot of dependencies (ie ipv6 subents) could be optionally imported, or created outside of terraform, hence the "ignore importing v6 cidr" type of comments.
+Another idea I had was to make the tf flexible, you may see some ignore statements commented out.  I actually wrote this backwards by having the cloud resources built first, then imported everything.  An idea occurred to me that some resources without a lot of dependencies (ie ipv6-subnets) could be optionally imported, or created outside of terraform, hence the "ignore importing v6 cidr" type of comments.
