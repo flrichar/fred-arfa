@@ -4,9 +4,9 @@
 
 data "aws_subnets" "total" {
   filter {
-    name       = "vpc-id"
-    values     = [aws_vpc.main.id]
- }
+    name   = "vpc-id"
+    values = [aws_vpc.main.id]
+  }
   depends_on = [aws_vpc.main]
 }
 
