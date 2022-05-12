@@ -2,11 +2,11 @@ output vpc_id {
   value = aws_vpc.main.id
 }
 
-output internal_subnet_ids {
+output internal_subnet_info {
   value = aws_subnet.internal
 }
 
-output external_subnet_ids {
+output external_subnet_info {
   value = aws_subnet.external
 }
 

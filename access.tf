@@ -1,12 +1,17 @@
 ## get total subnets for standard nacl
 
-data "aws_subnet_ids" "total" {
-  vpc_id     = aws_vpc.main.id
+## see https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-4-upgrade#data-source-aws_subnet_ids for new >4.0 changes
+
+data "aws_subnets" "total" {
+  filter {
+    name       = "vpc-id"
+    values     = [aws_vpc.main.id]
+ }
   depends_on = [aws_vpc.main]
 }
 
 data "aws_subnet" "total" {
-  for_each   = data.aws_subnet_ids.total.ids
+  for_each   = toset(data.aws_subnets.total.ids)
   id         = each.value
   depends_on = [aws_vpc.main]
 }
