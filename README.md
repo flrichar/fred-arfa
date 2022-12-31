@@ -17,7 +17,7 @@ freds arfa -- aws reference architecture
  - keep env vars separate, then symlink terraform.tfvars for maximum laziness
  - ability to run this arfa (AWS ReFerence Archictecture) in different regions with identical config
 
-A big thanks to Jeffery (you know who you are), I took a lot of your tf ideas and mashed them together with mine. If there's a proper awesome way to send attribution let me know.
+A big thanks to my pals -- you know who you are -- I took a lot of your tf ideas and mashed them together with mine. If there's a proper awesome way to send attribution let me know.
 
 This is nowhere near perfect. I want to make the access rules for trust-nets a variable, and perhaps a module for the subnets.  Right now there's a weird catch 22 where terraform can't count subnets if they're not created yet.  One can always get around this by using terraform -target=aws_vpc.main ... in other words, create the VPC first then continue.
 
