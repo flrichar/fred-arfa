@@ -19,7 +19,7 @@ freds arfa -- aws reference architecture
 
 A big thanks to my pals -- you know who you are -- I took a lot of your tf ideas and mashed them together with mine. If there's a proper awesome way to send attribution let me know.
 
-This is nowhere near perfect. I want to make the access rules for trust-nets a variable, and perhaps a module for the subnets.  Right now there's a weird catch 22 where terraform can't count subnets if they're not created yet.  One can always get around this by using terraform -target=aws_vpc.main ... in other words, create the VPC first then continue.
+This is nowhere near perfect. I want to make the access rules for trust-nets a variable, and perhaps a module for the subnets.  Right now there's a weird catch 22 where terraform can't count subnets if they're not created yet.  One can always get around this by using the command `terraform -target=aws_vpc.main` ... in other words, create the VPC first then continue.
 
 Because I use this in my labs, tons of subnets were not necessary.  As small as necessary, with only two.
 
